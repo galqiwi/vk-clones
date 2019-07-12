@@ -8,7 +8,10 @@ print(groups)
 counter = 0
 for vk in vk_apis:
 	for group in groups['items']:
-		print('add to', group)
-		vk.groups.join(group_id=group)
+		try:
+			print('add to', group)
+			vk.groups.join(group_id=group)
+		except:
+			pass
 	print(counter)
 	counter += 1
